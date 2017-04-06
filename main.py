@@ -63,7 +63,7 @@ class ping_loop():
 		list_ip = self.ips(ip_start, ip_stop)
 		print("------------------------")
 		for ip in list_ip:
-			proc = subprocess.Popen(['ping', '-c', '1', ip], stdout=subprocess.PIPE)
+			proc = subprocess.Popen(['ping', '-c', '1', '-w', '1', ip], stdout=subprocess.PIPE)
 			stdout, stderr = proc.communicate()
 			if proc.returncode == 0:
 				print('{} is UP'.format(ip))
@@ -77,5 +77,5 @@ class ping_loop():
 		return True
 
 ip_calc = ping_loop()
-ip_calc.number_ip("192.168.0.1", "192.168.0.254")
+ip_calc.number_ip("192.168.0.253", "192.168.0.254")
 ip_calc.ping("192.168.0.1", "192.168.0.255")
