@@ -46,7 +46,7 @@ class ping_loop():
 					iprange3 = int(iprange)
 					list_numb.append(iprange3)
 
-		Total = sum(list_numb)+1
+		Total = sum(list_numb)
 		print (" {:,}{}".format(Total, " Total ip in range"))
 		return int(Total)
 
@@ -77,5 +77,5 @@ class ping_loop():
 		return True
 
 ip_calc = ping_loop()
-ip_calc.number_ip("192.168.0.253", "192.168.0.254")
+ip_calc.number_ip("192.168.0.1", "192.168.0.255")
 ip_calc.ping("192.168.0.1", "192.168.0.255")
