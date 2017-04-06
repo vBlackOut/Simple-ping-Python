@@ -78,4 +78,4 @@ class ping_loop():
 
 ip_calc = ping_loop()
 ip_calc.number_ip("192.168.0.1", "192.168.0.254")
-ip_calc.ping("192.168.0.1", "192.168.0.254")
+ip_calc.ping("192.168.0.1", "192.168.0.255")
